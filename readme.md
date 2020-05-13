@@ -36,7 +36,7 @@ bin/magento orba:sampledata:media --skus=WJ10,WJ11,WJ12
 
 ### Limit product images size
 
-In this case product images will be limited to 20MB
+In this case product images will be limited to 20MB.
 
 ```
 bin/magento orba:sampledata:media --max-size=20
