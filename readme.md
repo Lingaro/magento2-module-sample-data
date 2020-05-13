@@ -24,6 +24,8 @@ bin/magento orba:sampledata:media [--skus=SKU1,SKU2,...] [--max-size=N] [--maint
 * `--max-size=N` - Optional, allowes to limit aggregated size of product images to N (in MB).
 * `--maintenance` - Optional, enable maintenance mode
 
+Result tgz file will be placed in `var/backups` directory.
+
 ### Only product selection 
 
 Complex product children will be attached into the dump too.
