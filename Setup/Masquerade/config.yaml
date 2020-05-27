@@ -1,5 +1,0 @@
-platform: magento2
-database: enterprise
-username: magento
-password: magento_password
-host: magento-mysql:3306
