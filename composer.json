@@ -3,8 +3,15 @@
     "description": "Orba sample data module",
     "require": {
         "php": "~7.2",
-        "magento/framework": "*"
+        "magento/framework": "*",
+        "elgentos/masquerade": "0.1.9"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:elgentos/masquerade.git"
+        }
+    ],
     "type": "magento2-module",
     "version": "0.1.0",
     "license": [
