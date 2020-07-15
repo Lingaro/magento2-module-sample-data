@@ -4,7 +4,7 @@
     "require": {
         "php": "~7.2",
         "magento/framework": "*",
-        "elgentos/masquerade": "0.1.9"
+        "elgentos/masquerade": "^0.1.9"
     },
     "repositories": [
         {
@@ -13,7 +13,7 @@
         }
     ],
     "type": "magento2-module",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
