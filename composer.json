@@ -4,7 +4,7 @@
     "require": {
         "php": "~7.2",
         "magento/framework": "*",
-        "elgentos/masquerade": "^0.1.9"
+        "elgentos/masquerade": "0.1.10"
     },
     "repositories": [
         {
