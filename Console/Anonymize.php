@@ -13,6 +13,8 @@ use Illuminate\Database\Connection;
 use InvalidArgumentException;
 use Magento\Framework\App\DeploymentConfig;
 use Magento\Framework\Console\Cli;
+use Magento\Framework\Exception\FileSystemException;
+use Magento\Framework\Filesystem\DirectoryList;
 use Magento\Framework\Module\Dir;
 use Magento\Framework\Module\Dir\Reader;
 use Symfony\Component\Console\Command\Command;
@@ -59,6 +61,7 @@ class Anonymize extends Command
     protected $db;
 
     protected $group = [];
+
     /**
      * @var Capsule
      */
@@ -69,12 +72,18 @@ class Anonymize extends Command
      */
     protected $fakerInstanceCache;
 
+    /**
+     * @var DirectoryList
+     */
+    private $directoryList;
+
 
     /**
      * @param Reader $moduleReader
      * @param DeploymentConfig $deploymentConfig
      * @param Config $configHelper
      * @param Capsule $capsule
+     * @param DirectoryList $directoryList
      * @param string|null $name
      */
     public function __construct(
@@ -82,6 +91,7 @@ class Anonymize extends Command
         DeploymentConfig $deploymentConfig,
         ConfigHelper $configHelper,
         Capsule $capsule,
+        DirectoryList $directoryList,
         string $name = null
     ) {
         parent::__construct($name);
@@ -89,6 +99,7 @@ class Anonymize extends Command
         $this->deploymentConfig = $deploymentConfig;
         $this->configHelper = $configHelper;
         $this->capsule = $capsule;
+        $this->directoryList = $directoryList;
     }
 
     protected function configure()
@@ -243,9 +254,22 @@ class Anonymize extends Command
         $this->group = array_filter(array_map('trim', explode(',', $this->input->getOption('group'))));
     }
 
+    /**
+     * @return array
+     * @throws FileSystemException
+     */
     protected function getConfig()
     {
-        return $this->configHelper->readYamlDir($this->getConfigDir(), 'anonymize');
+        $config = [];
+        $dirs = [
+            $this->getConfigDir(),
+            $this->directoryList->getPath(Dir::MODULE_ETC_DIR)
+        ];
+        foreach ($dirs as $dir) {
+            $content = $this->configHelper->readYamlDir($dir, 'anonymize');
+            $config = array_merge($config, $content);
+        }
+        return $config;
     }
 
     /**
