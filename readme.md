@@ -11,7 +11,6 @@ You can filter only needed products including various products types or limit to
 ## Install
 
 ```
-composer config repositories.repo-name vcs https://github.com/elgentos/masquerade
 composer require orba/module-sample-data
 bin/magento setup:upgrade
 ```
@@ -72,10 +71,12 @@ magento/vendor/orba/module-sample-data/etc/anonymize
 You can extend this configuration by adding your own yaml files in:
 
 ```
-magento/etc/anonymize/
+magento/app/etc/anonymize/
 ```
 
+### Modules used
 
+Extension https://github.com/elgentos/masquerade to anonymize data
 
  
 
