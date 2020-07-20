@@ -1,5 +1,5 @@
 {
-    "name": "bartosz-serafin-orba/module-sample-data",
+    "name": "orba/module-sample-data",
     "description": "Orba sample data module",
     "require": {
         "php": "~7.2",
