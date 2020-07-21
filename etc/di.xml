@@ -4,6 +4,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="media" xsi:type="object">Orba\SampleData\Console\Media</item>
+                <item name="anonymize" xsi:type="object">Orba\SampleData\Console\Anonymize</item>
             </argument>
         </arguments>
     </type>
