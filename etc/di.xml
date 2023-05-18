@@ -3,7 +3,7 @@
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="media" xsi:type="object">Orba\SampleData\Console\Media</item>
+                <item name="media" xsi:type="object">Lingaro\SampleData\Console\Media</item>
             </argument>
         </arguments>
     </type>

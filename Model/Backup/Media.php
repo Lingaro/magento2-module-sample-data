@@ -1,6 +1,11 @@
 <?php
 
-namespace Orba\SampleData\Model\Backup;
+/**
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
+ */
+
+namespace Lingaro\SampleData\Model\Backup;
 
 use DirectoryIterator;
 use FilesystemIterator;
