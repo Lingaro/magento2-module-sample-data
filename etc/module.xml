@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Orba_SampleData" setup_version="1.0.0">
+    <module name="Lingaro_SampleData" setup_version="1.0.0">
     </module>
 </config>

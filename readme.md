@@ -1,4 +1,4 @@
-# Orba Sample Data
+# Lingaro Sample Data
  
 Module adds command to dump media product images with some limitations:
 
@@ -11,14 +11,14 @@ You can filter only needed products including various products types or limit to
 ## Install
 
 ```
-composer require orba/module-sample-data
+composer require lingaro/module-sample-data
 bin/magento setup:upgrade
 ```
 
 ## Usage
 
 ```
-bin/magento orba:sampledata:media [--skus=SKU1,SKU2,...] [--max-size=N] [--maintenance]
+bin/magento lingaro:sampledata:media [--skus=SKU1,SKU2,...] [--max-size=N] [--maintenance]
 ```
 * `--skus=SKU1,SKU2,...` - Optional, filter comma separated SKUs
 * `--max-size=N` - Optional, allowes to limit aggregated size of product images to N (in MB).
@@ -29,7 +29,7 @@ bin/magento orba:sampledata:media [--skus=SKU1,SKU2,...] [--max-size=N] [--maint
 Complex product children will be attached into the dump too.
 
 ```
-bin/magento orba:sampledata:media --skus=WJ10,WJ11,WJ12
+bin/magento lingaro:sampledata:media --skus=WJ10,WJ11,WJ12
 ```
 
 ### Limit product images size
@@ -37,17 +37,17 @@ bin/magento orba:sampledata:media --skus=WJ10,WJ11,WJ12
 In this case product images will be limited to 20MB
 
 ```
-bin/magento orba:sampledata:media --max-size=20
+bin/magento lingaro:sampledata:media --max-size=20
 ```
 
 ### Mixed filters
 
 ```
-bin/magento orba:sampledata:media --skus=WJ10,WJ11,WJ12 --max-size=20
+bin/magento lingaro:sampledata:media --skus=WJ10,WJ11,WJ12 --max-size=20
 ```
 
 ### Full dump
 ```
-bin/magento orba:sampledata:media
+bin/magento lingaro:sampledata:media
 ```
  

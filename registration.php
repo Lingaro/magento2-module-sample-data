@@ -1,9 +1,14 @@
 <?php
 
+/**
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
+ */
+
 use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Orba_SampleData',
+    'Lingaro_SampleData',
     __DIR__
 );

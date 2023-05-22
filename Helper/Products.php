@@ -1,6 +1,11 @@
 <?php
 
-namespace Orba\SampleData\Helper;
+/**
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
+ */
+
+namespace Lingaro\SampleData\Helper;
 
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;

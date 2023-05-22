@@ -1,6 +1,11 @@
 <?php
 
-namespace Orba\SampleData\Console;
+/**
+ * Copyright © 2023 Lingaro sp. z o.o. All rights reserved.
+ * See LICENSE for license details.
+ */
+
+namespace Lingaro\SampleData\Console;
 
 use Exception;
 use Magento\Framework\App\Area;
@@ -10,8 +15,8 @@ use Magento\Framework\App\State;
 use Magento\Framework\Console\Cli;
 use Magento\Framework\Exception\FileSystemException;
 use Magento\Framework\Exception\LocalizedException;
-use Orba\SampleData\Helper\Products;
-use Orba\SampleData\Model\Backup\Media as MediaBackup;
+use Lingaro\SampleData\Helper\Products;
+use Lingaro\SampleData\Model\Backup\Media as MediaBackup;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -19,12 +24,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class Media
- * @package Orba\SampleData\Console
+ * @package Lingaro\SampleData\Console
  */
 class Media extends Command
 {
     /** @var string */
-    private const NAME = 'orba:sampledata:media';
+    private const NAME = 'lingaro:sampledata:media';
 
     /** @var string */
     private const MAX_SIZE = 'max-size';
@@ -127,7 +132,7 @@ class Media extends Command
         ];
 
         $this->setName(self::NAME)
-            ->setDescription('Orba media backup')
+            ->setDescription('Lingaro media backup')
             ->setDefinition($options);
 
         parent::configure();
