@@ -2,7 +2,7 @@
     "name": "lingaro/module-sample-data",
     "description": "Lingaro sample data module",
     "require": {
-        "php": "~7.0.0 || ~8.1.0",
+        "php": "^7.4 || ^8.1",
         "magento/framework": "*"
     },
     "type": "magento2-module",
